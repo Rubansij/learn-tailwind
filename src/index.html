@@ -14,12 +14,15 @@
       />
       <section class="text-center mt-10">
         <h3 class="font-semibold text-2xl mb-2">Paul Wekesa</h3>
-        <p class="text-blue-500 text-xs mb-5">Software Engineer</p>
+        <div id="text">
+          <p class="text-blue-500 text-xs mb-5">Software Engineer</p>
         <p class="text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem at illo
           alias est voluptatum repellendus hic amet, ab quae beatae rerum
           facilis voluptate, nesciunt commodi ut aliquid aperiam nulla ullam.
         </p>
+        </div>
+        
 
         <div class="flex justify-center gap-5 mt-10">
           <svg
@@ -65,11 +68,28 @@
 
       <section class="mt-10">
         <button
-          class="bg-blue-600 text-white text-lg capitalize font-medium w-full py-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out"
+          class="bg-blue-600 text-white text-lg capitalize font-medium w-full py-2 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out" onclick="toggleContent()" id="contactButton
+          "
         >
           Contact me
         </button>
+      
       </section>
     </div>
+      <script>
+         function toggleContent() {
+        var text = document.getElementById('text');
+        var contactButton = document.getElementById('contactButton');
+
+        if (text.style.display === 'none') {
+          text.style.display = 'block';
+          contactButton.innerText = 'Contact me';
+        } else {
+          text.style.display = 'none';
+          contactButton.innerText = 'Go back';
+        }
+      }
+      </script>
+   
   </body>
 </html>
